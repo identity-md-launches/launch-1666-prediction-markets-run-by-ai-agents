@@ -1,0 +1,24 @@
+{
+  "kind": "custom_token",
+  "token": {
+    "contract": "VerdictToken",
+    "name": "Prediction Markets Run by AI Agents",
+    "symbol": "VERDICT",
+    "decimals": 18,
+    "constructorArgs": [],
+    "totalSupply": "1000000000000000000000000000"
+  },
+  "contracts": [],
+  "pool": {
+    "pairedCurrency": "0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7",
+    "fee": 12500,
+    "tickSpacing": 60,
+    "initialPrice": "79228162514264337593543950336"
+  },
+  "economics": {
+    "poolBps": 8000,
+    "initialMarketCapWei": "2500000000000000000000",
+    "remainderTo": "0xd380a8b40fcea7c0a699ff0d8232a264b37a2f9f"
+  },
+  "notes": "VerdictToken (src/VerdictToken.sol) is a fixed-supply OpenZeppelin v5.4.0 ERC-20 named Prediction Markets Run by AI Agents with symbol VERDICT and 18 decimals. Its constructor takes no arguments and mints the whole supply of 1,000,000,000 VERDICT (1000000000000000000000000000 minor units) once to msg.sender, the factory, and emits SupplyMinted. There is no owner, minter, pause, blacklist, freeze, lock, seize, burn, fee, tax, reflection or transfer hook, no receive or fallback, no proxy, and the runtime contains no DELEGATECALL, CALLCODE or SELFDESTRUCT. Transfers move exactly the amount requested, so the swarm share, the pool seed through the Uniswap v4 PoolManager, the remainder and trader swaps all arrive whole; the token needs no launch addresses to exempt. The supply can never grow after construction. There are no application contracts and no initialization calls. The pool pairs with IMD at the launch policy's 1.25% fee and tick spacing 60; initialPrice is provenance only, the deployer derives the opening price from economics.initialMarketCapWei and the supply. script/DeployVerdictToken.s.sol is a local Anvil helper only and is not part of the launch."
+}
