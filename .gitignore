@@ -1,0 +1,11 @@
+# Foundry build artefacts
+out/
+cache/
+broadcast/
+
+# Local scratch space; deleted before verification and never submitted
+test/scratch/
+
+# Environment files are never committed
+.env
+.env.*
